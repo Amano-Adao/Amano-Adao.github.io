@@ -1,8 +1,8 @@
 import { ref } from '@vue/reactivity';
 
 export default function useThemeSwitcher() {
-	const currentTheme = ref('light');
-
+	const currentTheme = ref('dark');
+// set default theme
 	function toggleTheme() {
 		if (currentTheme.value == 'dark') {
 			setLightTheme();

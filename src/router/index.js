@@ -23,6 +23,18 @@ const routes = [
 		},
 	},
 	{
+		path: '/posts',
+		name: 'Posts',
+		// route level code-splitting
+		// this generates a separate chunk (about.[hash].js) for this route
+		// which is lazy-loaded when the route is visited.
+		component: () =>
+			import(/* webpackChunkName: "about" */ '../views/About.vue'), // TO DO
+		meta: {
+			title: 'MatthewS - Blog',
+		},
+	},
+	{
 		path: '/projects',
 		name: 'Projects',
 		// route level code-splitting
@@ -74,7 +86,7 @@ export default router;
 
 /**
  * Below code will display the component/active page title
- * Powered by: Nangialai Stoman
+
  */
 
 // This callback runs before every route change, including on page load.
